@@ -21,6 +21,19 @@
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="/bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
+    <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+    var config = {
+    apiKey: "AIzaSyAn208UXrkJEV7EW_LwvHkHvy6qt_eN_yo",
+    authDomain: "pi-firebase-a5a23.firebaseapp.com",
+    databaseURL: "https://pi-firebase-a5a23.firebaseio.com",
+    projectId: "pi-firebase-a5a23",
+    storageBucket: "pi-firebase-a5a23.appspot.com",
+    messagingSenderId: "1021626750082"
+    };
+    firebase.initializeApp(config);
+    </script>
   </head>
   <body>
     <!--[if IE]>
