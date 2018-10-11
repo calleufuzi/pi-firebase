@@ -22,19 +22,39 @@
     <script src="/bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
     <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
     <script>
-    // Initialize Firebase
-    var config = {
-    apiKey: "AIzaSyAn208UXrkJEV7EW_LwvHkHvy6qt_eN_yo",
-    authDomain: "pi-firebase-a5a23.firebaseapp.com",
-    databaseURL: "https://pi-firebase-a5a23.firebaseio.com",
-    projectId: "pi-firebase-a5a23",
-    storageBucket: "pi-firebase-a5a23.appspot.com",
-    messagingSenderId: "1021626750082"
-    };
-    firebase.initializeApp(config);
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyBWEef3AFAnfiZlYkXgmofMVIxtyjFbpyE",
+        authDomain: "fir-pi-c3dea.firebaseapp.com",
+        databaseURL: "https://fir-pi-c3dea.firebaseio.com",
+        projectId: "fir-pi-c3dea",
+        storageBucket: "",
+        messagingSenderId: "927629328872"
+      };
+      firebase.initializeApp(config);
     </script>
-  </head>
+
+    <script>
+      $(document).ready(function(){
+        console.log('ok');
+        const firestore = firebase.firestore();
+        const settings = {timestampsInSnapshots: true};
+        firestore.settings(settings);
+
+        
+        firebase.firestore().collection("links").add({
+          link:'http://www.google.com.br'
+        })
+        .then(function(docRef){
+          console.log(docRef);
+        });
+
+      });
+    </script>
+
+    </head>
   <body>
     <!--[if IE]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
