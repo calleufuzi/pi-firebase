@@ -1,6 +1,6 @@
 (function(){
-    // var firebase = require("firebase/app");
-    // require("firebase/auth");
+    var firebase = require("firebase/app");
+    require("firebase/auth");
     
     'use strict'
     $(document).ready(function(){
