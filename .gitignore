@@ -1,3 +1,4 @@
 # exclude everything except directory foo/bar
-.tmp*
-/node_module*
+#.tmp*
+#/node_module*
+#/bower_components*
