@@ -7,11 +7,38 @@
     <title>Login</title>
     <link rel="stylesheet" href="./login.css">
     <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="../../styles/main.css">
 
 </head>
 <body>
-    <h1>Login</h1>
-    
-    
+    <div class="container center-vh">
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-3">
+                <div class="thumbnail">
+                    <div class="avatarIcon">
+                        <p class="glyphicon glyphicon-user" aria-hidden="true"></p>
+                    </div>
+                    <h2 class="text-center">Login</h2>
+                    <div class="caption">
+                        <form>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Endereço de E-mail</label>
+                                 <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Digite o seu Email">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Senha</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Digite a sua Senha">
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block ">Criar</button>
+                            <div class="form-group row pt-1">
+                                <small class="col-sm-12 text-center pt-10">Não Possui uma conta? <a href="./singup.html">Criar</a></small>
+                                <a class="col-sm-12 text-center " href="./forgotPass.html"> <small>Esqueci minha senha </small></a>
+                            </div>
+                        </form>                  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

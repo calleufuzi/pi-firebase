@@ -1,0 +1,36 @@
+.pt-10{
+  padding-top: 10px;
+}
+.pt-20{
+  padding-top: 20px;
+}
+.ptb-10{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.ptb-20{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.container.center-vh{
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 40px);
+    justify-content: center;
+}
+.avatarIcon{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #ccc;
+  position: relative; 
+  margin: 20px auto;
+}
+.avatarIcon .glyphicon{
+  font-size: 20px;
+  color: #fff;
+  position: absolute;
+  left: calc(50% - 10px);
+  top: calc(50% - 10px);
+}
