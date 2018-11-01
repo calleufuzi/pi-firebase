@@ -49,7 +49,7 @@
             snapshot.docChanges().forEach(function(change) {
                 if (change.type === "added") {
                     //console.log("novo ", change.doc.data());
-                    $("#chat ul").append("<li>"+change.doc.data().mensagem+"</li>");
+                    $("#chat ul").prepend("<li>"+change.doc.data().mensagem+"</li>");
                 }
     
             });
