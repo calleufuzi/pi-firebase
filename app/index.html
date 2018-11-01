@@ -39,6 +39,9 @@
 
     <script>
       $(document).ready(function(){
+
+        
+
         const firestore = firebase.firestore();
         const settings = {timestampsInSnapshots: true};
         firestore.settings(settings);
@@ -49,7 +52,11 @@
             snapshot.docChanges().forEach(function(change) {
                 if (change.type === "added") {
                     //console.log("novo ", change.doc.data());
-                    $("#chat ul").prepend("<li>"+change.doc.data().mensagem+"</li>");
+                    $("#chat ul").prepend("<li>" +
+                      "<img src='" + change.doc.data().foto + "'/> "+
+                      change.doc.data().mensagem
+                      +
+                      "</li>");
                 }
     
             });
@@ -59,11 +66,23 @@
         $("#btn_envio").click(function(){
           
           console.log("a");
+          var foto;
+          $.ajax({
+                      url: 'https://randomuser.me/api/',
+                      dataType: 'json',
+                      success: function(data) {
+                        foto = data.results[0].picture.thumbnail;
+                        
+                        firebase.firestore().collection("chat").add({
+                          'usuario': 'nome',
+                          'mensagem' : $("#ctn_caixa").val(),
+                          'foto': foto
+                        })
 
-          firebase.firestore().collection("chat").add({
-            'usuario': 'nome',
-            'mensagem' : $("#ctn_caixa").val()
-          })
+                      }
+                    });
+          
+          
 
 
         });
